@@ -1,0 +1,30 @@
+using System;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+
+namespace CSharp
+{
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+        Console.WriteLine("Write three values for the sides of the triangle.\nWith one condition: each side must be less than the addition of two others.");
+
+            string x = Console.ReadLine();
+            float x1 = float.Parse(x);
+
+            string y = Console.ReadLine();
+            float y1 = float.Parse(y);
+
+            string z = Console.ReadLine();
+            float z1 = float.Parse(z);
+
+            float p = (x1 + y1 + z1) / 2;
+
+            float s = (p * (p - x1) * (p - y1) * (p - z1));
+
+            Console.WriteLine(Math.Sqrt(s));
+        }
+    } 
+} 
